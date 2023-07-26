@@ -32,7 +32,7 @@ const NewTodoForm = ({ addTodo }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="text"></label>
+            <label htmlFor="text">Text</label>
             <input
                 id="text"
                 type="text"

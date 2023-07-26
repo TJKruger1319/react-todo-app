@@ -19,7 +19,7 @@ function TodoList() {
             <NewTodoForm addTodo={addTodo}/>
             <ul>
                 {todos.map(({ id, text }) =>
-                <li>
+                <li key={id}>
                     <Todo 
                     key={id} 
                     id={id} 
