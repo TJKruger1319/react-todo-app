@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-function Todo({todoString}) {
+function Todo({text}) {
     return (
-        <div>{todoString}</div>
+        <div>{text}</div>
     );
 }
 
@@ -29,6 +29,18 @@ const NewTodoForm = ({ addTodo }) => {
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor="text"></label>
+            <input
+                id="text"
+                type="text"
+                name="text"
+                placeholder="text"
+                value={FormData.text}
+                onChange={handleChange}
+            />
+
+            <button>Add new todo</button>
         </form>
     )
 }
+
+export { Todo, NewTodoForm };
