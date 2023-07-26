@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 
-function Todo({text}) {
+function Todo({ id, text, remove}) {
+    const handleRemove = () => remove(id);
     return (
-        <div>{text}</div>
+        <div>
+            <p>{ text }</p>
+            <button onClick={handleRemove}>X</button>
+        </div>
     );
 }
 
